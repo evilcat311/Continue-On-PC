@@ -3,9 +3,13 @@ Continue on PC is a tool that obtains a URL from an email sent from a text messa
 
 ## ToDo
   Complete E-Mail server host
+  
   Complete open-on-browser script
+  
   complete user security features
+  
   complete user QOL changes
+  
 
 ## Usage
 -javac -cp "classpath": Receive_Mail.java
