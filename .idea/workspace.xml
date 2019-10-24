@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="392100b8-d873-4abe-9b80-b4a43aeb43f9" name="Default Changelist" comment="" />
+    <list default="true" id="392100b8-d873-4abe-9b80-b4a43aeb43f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/J2EE_1_4_J2EE_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Receive_Mail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Continue On PC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Continue On PC.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main_Test.java" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,18 +22,41 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main_Test.java">
+        <entry file="file://$PROJECT_DIR$/src/Receive_Mail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="22" selection-start-column="22" selection-end-column="22" />
+            <state relative-caret-position="240">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Main_Test.java" />
+        <option value="$PROJECT_DIR$/src/Receive_Mail.java" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="293" />
@@ -49,11 +78,6 @@
             <path>
               <item name="Continue On PC" type="b2602c69:ProjectViewProjectNode" />
               <item name="Continue On PC" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Continue On PC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Continue On PC" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -91,7 +115,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571891717475</updated>
-      <workItem from="1571891721153" duration="497000" />
+      <workItem from="1571891721153" duration="1997000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Git Create">
       <created>1571891879445</created>
@@ -107,11 +131,18 @@
       <option name="project" value="LOCAL" />
       <updated>1571892171406</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Create Test Main Class">
+      <created>1571892245116</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571892245116</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="497000" />
+    <option name="totallyTimeSpent" value="1997000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -152,13 +183,24 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Git Create" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Git Create" />
+    <MESSAGE value="Create Test Main Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Test Main Class" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Receive_Mail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
