@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="392100b8-d873-4abe-9b80-b4a43aeb43f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_mail.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Continue On PC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Continue On PC.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Receive_Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Receive_Mail.java" afterDir="false" />
@@ -43,8 +40,8 @@
     <property name="last_opened_file_path" value="C:/drivers-Jars/JAR files/javax.mail.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
@@ -60,6 +57,14 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.test">
+    <configuration name="test" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Receive_Mail" />
+      <module name="Continue On PC" />
+      <option name="PROGRAM_PARAMETERS" value="evilcat311@gmail.com 5Red@brick" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="[]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -121,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571892245116</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Complete test of receive mail.java class">
+      <created>1571957119164</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571957119164</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -144,7 +156,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Git Create" />
     <MESSAGE value="Create Test Main Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Test Main Class" />
+    <MESSAGE value="Complete test of receive mail.java class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete test of receive mail.java class" />
   </component>
   <component name="simpleUML.UMLToolWindowPlugin">
     <General>

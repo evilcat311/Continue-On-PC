@@ -11,8 +11,8 @@ public class Receive_Mail {
     public static void main(String[] args){
         String Host_Email = "pop.gmail.com";
         String mailStrProt = "pop3";
-        String Username = "evilcat311@gmail.com";
-        String Password = "insert password here";
+        String Username = args[0];
+        String Password = args[1];
         check(Host_Email, mailStrProt, Username, Password);
 
     }
