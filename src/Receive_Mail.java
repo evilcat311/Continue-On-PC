@@ -40,40 +40,15 @@ public class Receive_Mail {
             store.connect(host, user, Password);
             Folder emailFolder = store.getFolder("Inbox");
             emailFolder.open(Folder.READ_WRITE);
-            Message[] messages = emailFolder.getMessages();
-            int n = messages.length;
-            outerloop:
-            for (int i = 0; i < n;) {
-                Message message = messages[i];
-                System.out.println(WhiteList.contains(message.getFrom()[i].toString()));
-                System.out.println(message.getFrom()[i]);
+            Message[] messages_array = emailFolder.getMessages();
+            int n = messages_array.length;
+            for (int i = 0; i < n; i++) {
+                Message message = messages_array[i];
+                System.out.println(WhiteList.contains(message.getFrom()[0].toString()));
+                System.out.println(message.getFrom()[0]);
                 System.out.println("the i is " + i);
-                n--;
-
-
-                while (WhiteList.contains(message.getFrom()[i].toString()) == true) {
-
-
-                    System.out.println("messages.length----" + messages.length);
-                        System.out.println("----------------------------");
-                        System.out.println("Email number " + (i + 1));
-                        System.out.println("Subject: " + message.getSubject());
-                        System.out.println("From: " + message.getFrom()[i]);
-                        System.out.println("Text: " + message.getContent().toString());
-                        message.setFlag(Flags.Flag.DELETED, true);
-                        boolean tester = WhiteList.contains(message.getFrom()[i].toString());
-                        System.out.println(tester);
-                        System.out.println(message.getFrom()[i]);
-
-
-                            if(n == 0 || i >= messages.length){
-                                break outerloop;
-                            }
-
+                Process_Mail.Process(WhiteList, messages_array, message, i);
                 }
-                i++;
-
-            }
 
             emailFolder.close();
             store.close();
@@ -81,6 +56,7 @@ public class Receive_Mail {
         } catch (NoSuchProviderException e) { e.printStackTrace();}
         catch (MessagingException e){e.printStackTrace();}
         catch (IOException e) {e.printStackTrace();}
+
     }
 
         public static String[] Whitelist(String token) throws FileNotFoundException {
