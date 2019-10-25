@@ -37,14 +37,12 @@ public class Receive_Mail {
 
         store.connect(host, user, Password);
         Folder emailFolder = store.getFolder("Inbox");
-        emailFolder.open(Folder.READ_WRITE);
             Message[] messages_array = new Message[0];
             System.out.println(messages_array.length);
-            while(messages_array.length == 0){
-                emailFolder.close();
-                emailFolder.open(Folder.READ_WRITE);
-                messages_array = emailFolder.getMessages();
+            while(true){
+
                 if(messages_array.length != 0){
+                    emailFolder.open(Folder.READ_WRITE);
                     int n = messages_array.length;
                     for (int i = 0; i < n; i++) {
                         Message message = messages_array[i];
@@ -52,11 +50,20 @@ public class Receive_Mail {
                         System.out.println(WhiteList.contains(message.getFrom()[0].toString()));
                         System.out.println(message.getFrom()[0]);
                         System.out.println("the i is " + i);
-                        if (!Process_Mail.Process(WhiteList, messages_array, message, i)) {
-                            break;
-                        }
+                        message.setFlag(Flags.Flag.DELETED, true);
+                        String Content = Process_Mail.Process(WhiteList, messages_array, message, i);
+                        emailFolder.close();
+
                     }
 
+                }
+                else {
+                    emailFolder.open(Folder.READ_WRITE);
+                    messages_array = emailFolder.getMessages();
+                    emailFolder.close();
+                }
+                if(messages_array.equals("ashd")){
+                    break;
                 }
             }
         emailFolder.close();

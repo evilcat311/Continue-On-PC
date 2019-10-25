@@ -6,30 +6,10 @@ import javax.mail.Part;
 import java.io.IOException;
 import java.util.List;
 
-import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.Date;
-import java.util.Properties;
-
-import javax.mail.Address;
-import javax.mail.Folder;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Multipart;
-import javax.mail.NoSuchProviderException;
-import javax.mail.Part;
-import javax.mail.Session;
-import javax.mail.Store;
 
 
 public class Process_Mail {
-    public static boolean Process(List WhiteList, Message[] messages_array, Message message, int i) throws MessagingException, IOException {
+    public static String Process(List WhiteList, Message[] messages_array, Message message, int i) throws MessagingException, IOException {
 
 
         System.out.println(" messages.length----" + messages_array.length);
@@ -40,14 +20,8 @@ public class Process_Mail {
         System.out.println("Text: " + message.getContent().toString());
         System.out.println("Content In Plain Text: ");
         Written_Boyo(message);
-
-        message.setFlag(Flags.Flag.DELETED, true);
-
-
-        if(i >= messages_array.length){
-            return false;
-        }
-        else{return true;}
+        System.out.println("Written Boyo outputs: " + Written_Boyo(message));
+        return Written_Boyo(message);
 
     }
 
