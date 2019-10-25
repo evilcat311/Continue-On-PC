@@ -77,7 +77,7 @@
     <configuration name="test" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Receive_Mail" />
       <module name="Continue On PC" />
-      <option name="PROGRAM_PARAMETERS" value="continue.on.pc.host@gmail.com 5red@brick " />
+      <option name="PROGRAM_PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
