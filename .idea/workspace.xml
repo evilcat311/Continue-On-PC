@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="392100b8-d873-4abe-9b80-b4a43aeb43f9" name="Default Changelist" comment="">
+    <list default="true" id="392100b8-d873-4abe-9b80-b4a43aeb43f9" name="Default Changelist" comment="successfully">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Continue On PC/Process_Mail.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Continue On PC/Process_Mail.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Continue On PC/Receive_Mail.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Continue On PC/Receive_Mail.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Process_Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Process_Mail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Receive_Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Receive_Mail.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -180,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572008199500</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="successfully reading and returning contents of emails">
+      <created>1572009845626</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1572009845626</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +214,8 @@
     <MESSAGE value="Itterates through all emails in inbox in while loop once all emails are read all are deleted and program exits" />
     <MESSAGE value="Created and testing whitelist capabilities" />
     <MESSAGE value="successfully completed whitelist capabilities program only reads emails from specified phone numbers" />
-    <option name="LAST_COMMIT_MESSAGE" value="successfully completed whitelist capabilities program only reads emails from specified phone numbers" />
+    <MESSAGE value="successfully reading and returning contents of emails" />
+    <option name="LAST_COMMIT_MESSAGE" value="successfully reading and returning contents of emails" />
   </component>
   <component name="simpleUML.UMLToolWindowPlugin">
     <General>

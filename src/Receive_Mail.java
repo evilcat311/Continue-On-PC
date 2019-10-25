@@ -11,7 +11,7 @@ import javax.mail.Store;
 import javax.mail.Flags;
 
 public class Receive_Mail {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException, MessagingException {
         String Host_Email = "pop.gmail.com";
         String mailStrProt = "pop3";
         String Username = args[0];
@@ -25,40 +25,43 @@ public class Receive_Mail {
         check(Host_Email, mailStrProt, Username, Password, WhiteList);
 
     }
-    public static void check(String host, String storeType, String user, String Password, List WhiteList){
+    public static void check(String host, String storeType, String user, String Password, List WhiteList) throws MessagingException, IOException {
+        Properties properties = new Properties();
 
-        try{
-            Properties properties = new Properties();
+        properties.put("mail.pop3.host", host);
+        properties.put("mail.pop3.port", "995");
+        properties.put("mail.pop3.starttls.enable", "true");
+        Session emailSession = Session.getDefaultInstance(properties);
 
-            properties.put("mail.pop3.host", host);
-            properties.put("mail.pop3.port", "995");
-            properties.put("mail.pop3.starttls.enable", "true");
-            Session emailSession = Session.getDefaultInstance(properties);
+        Store store = emailSession.getStore("pop3s");
 
-            Store store = emailSession.getStore("pop3s");
-
-            store.connect(host, user, Password);
-            Folder emailFolder = store.getFolder("Inbox");
-            emailFolder.open(Folder.READ_WRITE);
-            Message[] messages_array = emailFolder.getMessages();
-            int n = messages_array.length;
-            for (int i = 0; i < n; i++) {
-                Message message = messages_array[i];
-                System.out.println("\n---------------------------------------------");
-                System.out.println(WhiteList.contains(message.getFrom()[0].toString()));
-                System.out.println(message.getFrom()[0]);
-                System.out.println("the i is " + i);
-                    if(Process_Mail.Process(WhiteList, messages_array, message, i) == false){
-                        break;
+        store.connect(host, user, Password);
+        Folder emailFolder = store.getFolder("Inbox");
+        emailFolder.open(Folder.READ_WRITE);
+            Message[] messages_array = new Message[0];
+            System.out.println(messages_array.length);
+            while(messages_array.length == 0){
+                emailFolder.close();
+                emailFolder.open(Folder.READ_WRITE);
+                messages_array = emailFolder.getMessages();
+                if(messages_array.length != 0){
+                    int n = messages_array.length;
+                    for (int i = 0; i < n; i++) {
+                        Message message = messages_array[i];
+                        System.out.println("\n---------------------------------------------");
+                        System.out.println(WhiteList.contains(message.getFrom()[0].toString()));
+                        System.out.println(message.getFrom()[0]);
+                        System.out.println("the i is " + i);
+                        if (!Process_Mail.Process(WhiteList, messages_array, message, i)) {
+                            break;
+                        }
                     }
+
                 }
-
-            emailFolder.close();
-            store.close();
-
-        } catch (NoSuchProviderException e) { e.printStackTrace();}
-        catch (MessagingException e){e.printStackTrace();}
-        catch (IOException e) {e.printStackTrace();}
+            }
+        emailFolder.close();
+        store.close();
+        System.exit(0);
 
     }
 
