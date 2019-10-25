@@ -5,10 +5,10 @@ import java.io.IOException;
 import java.util.List;
 
 public class Process_Mail {
-    public static void Process(List WhiteList, Message[] messages_array, Message message, int i) throws MessagingException, IOException {
+    public static boolean Process(List WhiteList, Message[] messages_array, Message message, int i) throws MessagingException, IOException {
 
 
-        System.out.println("messages.length----" + messages_array.length);
+        System.out.println("\n messages.length----" + messages_array.length);
         System.out.println("----------------------------");
         System.out.println("Email number " + (i + 1));
         System.out.println("Subject: " + message.getSubject());
@@ -17,7 +17,12 @@ public class Process_Mail {
         message.setFlag(Flags.Flag.DELETED, true);
         boolean tester = WhiteList.contains(message.getFrom()[0].toString());
         System.out.println(tester);
-        System.out.println(message.getFrom()[i]);
+        System.out.println(message.getFrom()[0]);
+
+        if(i >= messages_array.length){
+            return false;
+        }
+        else{return true;}
 
     }
 }

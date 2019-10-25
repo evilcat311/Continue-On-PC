@@ -47,7 +47,9 @@ public class Receive_Mail {
                 System.out.println(WhiteList.contains(message.getFrom()[0].toString()));
                 System.out.println(message.getFrom()[0]);
                 System.out.println("the i is " + i);
-                Process_Mail.Process(WhiteList, messages_array, message, i);
+                    if(Process_Mail.Process(WhiteList, messages_array, message, i) == false){
+                        break;
+                    }
                 }
 
             emailFolder.close();
