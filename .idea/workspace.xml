@@ -146,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571966088452</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Itterates through all emails in inbox in while loop once all emails are read all are deleted and program exits">
+      <created>1571966767196</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571966767197</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -172,7 +179,8 @@
     <MESSAGE value="Complete test of receive mail.java class" />
     <MESSAGE value="program requires user to use username and password as command line args" />
     <MESSAGE value="Itterates through all emails in inbox in unbreakable while loop if while loop breaks all emails itterated through delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Itterates through all emails in inbox in unbreakable while loop if while loop breaks all emails itterated through delete" />
+    <MESSAGE value="Itterates through all emails in inbox in while loop once all emails are read all are deleted and program exits" />
+    <option name="LAST_COMMIT_MESSAGE" value="Itterates through all emails in inbox in while loop once all emails are read all are deleted and program exits" />
   </component>
   <component name="simpleUML.UMLToolWindowPlugin">
     <General>

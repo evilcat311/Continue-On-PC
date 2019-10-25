@@ -50,7 +50,6 @@ public class Receive_Mail {
                     counter++;
                 }
                 if(counter == n){break;}
-
             }
 
             emailFolder.close();
