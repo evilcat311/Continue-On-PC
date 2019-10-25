@@ -44,6 +44,7 @@ public class Receive_Mail {
             int n = messages_array.length;
             for (int i = 0; i < n; i++) {
                 Message message = messages_array[i];
+                System.out.println("\n---------------------------------------------");
                 System.out.println(WhiteList.contains(message.getFrom()[0].toString()));
                 System.out.println(message.getFrom()[0]);
                 System.out.println("the i is " + i);
