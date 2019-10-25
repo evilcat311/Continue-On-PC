@@ -37,10 +37,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="C:/drivers-Jars/JAR files/javax.mail.jar!/" />
+    <property name="last_opened_file_path" value="C:/drivers-Jars/JAR files/jaf-1.1.1/activation.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -60,7 +60,7 @@
     <configuration name="test" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Receive_Mail" />
       <module name="Continue On PC" />
-      <option name="PROGRAM_PARAMETERS" value="evilcat311@gmail.com 5Red@brick" />
+      <option name="PROGRAM_PARAMETERS" value="continue.on.pc.host@gmail.com 5red@brick " />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -133,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571957119164</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="program requires user to use username and password as command line args">
+      <created>1571957532377</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1571957532377</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -157,7 +164,8 @@
     <MESSAGE value="Initial Git Create" />
     <MESSAGE value="Create Test Main Class" />
     <MESSAGE value="Complete test of receive mail.java class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete test of receive mail.java class" />
+    <MESSAGE value="program requires user to use username and password as command line args" />
+    <option name="LAST_COMMIT_MESSAGE" value="program requires user to use username and password as command line args" />
   </component>
   <component name="simpleUML.UMLToolWindowPlugin">
     <General>

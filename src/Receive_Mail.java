@@ -6,6 +6,7 @@ import javax.mail.MessagingException;
 import javax.mail.NoSuchProviderException;
 import javax.mail.Session;
 import javax.mail.Store;
+import javax.mail.Flags;
 
 public class Receive_Mail {
     public static void main(String[] args){
@@ -28,20 +29,23 @@ public class Receive_Mail {
             Store store = emailSession.getStore("pop3s");
 
             store.connect(host, user, Password);
-
             Folder emailFolder = store.getFolder("Inbox");
             emailFolder.open(Folder.READ_ONLY);
+            int p =1;
+            while (p==1) {
 
-            Message[] messages = emailFolder.getMessages();
-            System.out.println("messages.length----" + messages.length);
-            int n = messages.length;
-            for(int i = 0; i < n; i++){
-                Message message = messages[i];
-                System.out.println("----------------------------");
-                System.out.println("Email number " + (i+1));
-                System.out.println("Subject: " + message.getSubject());
-                System.out.println("From: " + message.getFrom()[0]);
-                System.out.println("Text: " + message.getContent().toString());
+                Message[] messages = emailFolder.getMessages();
+                System.out.println("messages.length----" + messages.length);
+                int n = messages.length;
+                for (int i = 0; i < n; i++) {
+                    Message message = messages[i];
+                    System.out.println("----------------------------");
+                    System.out.println("Email number " + (i + 1));
+                    System.out.println("Subject: " + message.getSubject());
+                    System.out.println("From: " + message.getFrom()[0]);
+                    System.out.println("Text: " + message.getContent().toString());
+                    message.setFlag(Flags.Flag.DELETED, true);
+                }
             }
             emailFolder.close();
             store.close();
