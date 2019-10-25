@@ -30,12 +30,14 @@ public class Receive_Mail {
 
             store.connect(host, user, Password);
             Folder emailFolder = store.getFolder("Inbox");
-            emailFolder.open(Folder.READ_ONLY);
-            int p =1;
+            emailFolder.open(Folder.READ_WRITE);
+            int p = 1;
+            int counter=0;
             while (p==1) {
 
                 Message[] messages = emailFolder.getMessages();
                 System.out.println("messages.length----" + messages.length);
+
                 int n = messages.length;
                 for (int i = 0; i < n; i++) {
                     Message message = messages[i];
@@ -45,8 +47,12 @@ public class Receive_Mail {
                     System.out.println("From: " + message.getFrom()[0]);
                     System.out.println("Text: " + message.getContent().toString());
                     message.setFlag(Flags.Flag.DELETED, true);
+                    counter++;
                 }
+                if(counter == n){break;}
+
             }
+
             emailFolder.close();
             store.close();
 

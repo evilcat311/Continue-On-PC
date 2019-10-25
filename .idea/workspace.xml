@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="392100b8-d873-4abe-9b80-b4a43aeb43f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Continue On PC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Continue On PC.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Receive_Mail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Receive_Mail.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -140,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571957532377</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Itterates through all emails in inbox in unbreakable while loop if while loop breaks all emails itterated through delete">
+      <created>1571966088452</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1571966088452</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -165,7 +171,8 @@
     <MESSAGE value="Create Test Main Class" />
     <MESSAGE value="Complete test of receive mail.java class" />
     <MESSAGE value="program requires user to use username and password as command line args" />
-    <option name="LAST_COMMIT_MESSAGE" value="program requires user to use username and password as command line args" />
+    <MESSAGE value="Itterates through all emails in inbox in unbreakable while loop if while loop breaks all emails itterated through delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Itterates through all emails in inbox in unbreakable while loop if while loop breaks all emails itterated through delete" />
   </component>
   <component name="simpleUML.UMLToolWindowPlugin">
     <General>
