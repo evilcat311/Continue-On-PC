@@ -14,18 +14,20 @@ public class Receive_Mail {
     public static void main(String[] args) throws IOException, MessagingException {
         String Host_Email = "pop.gmail.com";
         String mailStrProt = "pop3";
-        String Username = args[0];
-        String Password = args[1];
+        ArrayList<String> Credentials = new ArrayList<>();
+        Credentials.add(Get_Credentials.Get_Username());
+        Credentials.add(Get_Credentials.Get_Password());
+        System.out.println(Credentials);
         String token = ";";
-        ArrayList WhiteList = new ArrayList<String> (Arrays.asList(Whitelist(token)));
+        ArrayList WhiteList = new ArrayList<> (Arrays.asList(Whitelist(token)));
 
         System.out.println(Arrays.toString(WhiteList.toArray()));
 
 
-        check(Host_Email, mailStrProt, Username, Password, WhiteList);
+        check(Host_Email, mailStrProt, Credentials, WhiteList);
 
     }
-    public static void check(String host, String storeType, String user, String Password, List WhiteList) throws MessagingException, IOException {
+    public static void check(String host, String storeType, ArrayList<String> Credentials, List WhiteList) throws MessagingException, IOException {
         Properties properties = new Properties();
 
         properties.put("mail.pop3.host", host);
@@ -34,6 +36,8 @@ public class Receive_Mail {
         Session emailSession = Session.getDefaultInstance(properties);
 
         Store store = emailSession.getStore("pop3s");
+        String user = Credentials.get(0);
+        String Password = Credentials.get(1);
 
         store.connect(host, user, Password);
         Folder emailFolder = store.getFolder("Inbox");
@@ -44,7 +48,7 @@ public class Receive_Mail {
                 if(messages_array.length != 0){
                     emailFolder.open(Folder.READ_WRITE);
                     int n = messages_array.length;
-                    for (int i = 0; i < n; i++) {
+                    for(int i = 0; i < n; i++) {
                         Message message = messages_array[i];
                         System.out.println("\n---------------------------------------------");
                         System.out.println(WhiteList.contains(message.getFrom()[0].toString()));
@@ -53,6 +57,7 @@ public class Receive_Mail {
                         message.setFlag(Flags.Flag.DELETED, true);
                         String Content = Process_Mail.Process(WhiteList, messages_array, message, i);
                         emailFolder.close();
+
 
                     }
 
@@ -63,12 +68,11 @@ public class Receive_Mail {
                     emailFolder.close();
                 }
                 if(messages_array.equals("ashd")){
-                    break;
+                    emailFolder.close();
+                    store.close();
+                    System.exit(0);
                 }
             }
-        emailFolder.close();
-        store.close();
-        System.exit(0);
 
     }
 

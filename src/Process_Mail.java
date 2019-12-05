@@ -19,10 +19,7 @@ public class Process_Mail {
         System.out.println("From: " + message.getFrom()[0]);
         System.out.println("Text: " + message.getContent().toString());
         System.out.println("Content In Plain Text: ");
-        Written_Boyo(message);
-        System.out.println("Written Boyo outputs: " + Written_Boyo(message));
         return Written_Boyo(message);
-
     }
 
     public static String Written_Boyo(Part p) throws IOException, MessagingException {
@@ -30,7 +27,8 @@ public class Process_Mail {
             System.out.println("this message is plain text ");
             System.out.println("---------------------------");
             System.out.println((String) p.getContent());
-            return (String)p.getContent();
+            String Message = p.getContent().toString();
+            return Message;
         }
         else if(p.isMimeType("multipart/*")){
             Multipart mp = (Multipart) p.getContent();
